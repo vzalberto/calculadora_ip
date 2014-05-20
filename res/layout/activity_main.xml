@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ipOctects" >
+
+   <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="0px"
+        android:inputType="number"
+        android:layout_weight="2"
+        android:id="@+id/oct1" />  
+        
+   <TextView
+       android:layout_width="0px"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"
+       android:text="@string/dot"
+       android:textSize="18sp" />
+    
+    <EditText
+        android:layout_weight="2"        
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/oct2" />
+    
+   <TextView
+       android:layout_width="0px"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"
+       android:text="@string/dot"
+       android:textSize="18sp" />    
+    
+    <EditText
+        android:layout_weight="2"
+        
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/oct3" />    
+    
+   <TextView
+       android:layout_width="0px"
+       android:layout_height="wrap_content"
+       android:layout_weight="1"
+       android:text="@string/dot"
+       android:textSize="18sp" />    
+    
+    <EditText
+        android:layout_weight="2"        
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/oct4" />
+    
+    </LinearLayout>
+    
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ipOctects"
+        android:text=":D"
+        android:id="@+id/btn1"
+        android:onClick="action" />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn1" 
+        android:id="@+id/claseIP"/>
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/claseIP"
+        android:id="@+id/tuIP" />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tuIP"
+        android:id="@+id/calculo" >
+    	
+        <EditText
+            android:id="@+id/misterio"
+            android:layout_height="wrap_content"
+            android:layout_weight=".15"            
+       		android:layout_width="0px"
+            android:hint=":D"
+            android:inputType="number" />
+        
+        <RadioGroup android:id="@+id/radioGroup"
+   	 		android:layout_weight=".6"
+        	android:layout_width="0px"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal">
+    		
+    		<RadioButton android:id="@+id/radio_hosts"
+        android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+       	android:text="Hosts"/>
+    		
+    		<RadioButton android:id="@+id/radio_subredes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subredes"/>
+
+    		<RadioButton
+    		    android:id="@+id/radio_prefijo"
+    		    android:layout_width="wrap_content"
+    		    android:layout_height="wrap_content" 
+    		    android:text="Prefijo"/>
+		</RadioGroup>
+        
+     </LinearLayout>
+      
+     <LinearLayout android:id="@+id/ingresoPrefijo"
+         android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/calculo"  >
+            
+   		 <SeekBar android:id="@+id/barraPrefijo"
+       		android:layout_weight="0.75"
+        	android:layout_width="0px"
+	       	android:layout_height="wrap_content"
+	       	android:visibility="invisible" />
+   		 
+   		 <EditText android:id="@+id/valorPrefijo"
+   		     android:layout_weight="0.25"
+   		     android:layout_width="0px"
+   		     android:layout_height="wrap_content"
+   		     android:visibility="invisible"
+   		     />
+   		 
+   		 </LinearLayout>
+         
+    
+</RelativeLayout>
